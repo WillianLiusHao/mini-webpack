@@ -1,0 +1,16 @@
+{
+  "name": "webpack-core",
+  "version": "1.0.0",
+  "description": "study webpack",
+  "main": "index.js",
+  "author": "william",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/generator": "^7.18.13",
+    "@babel/parser": "^7.18.13",
+    "@babel/traverse": "^7.18.13",
+    "@babel/types": "^7.18.13",
+    "tapable": "^2.2.1"
+  },
+  "devDependencies": {}
+}
