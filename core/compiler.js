@@ -14,8 +14,8 @@ class Compiler {
   constructor(opts) {
     this.opts = opts
     this.rootPath = this.opts.context || toUnixPath(process.cwd())
-    // 外部可以通过 compiler.run.tap(eventName, cb) 注册事件
-    // 通过 this.hook.run.call() 触发所有 tap 注册的事件
+    // 外部通过 compiler.hooks.[hookName].tap(eventName, cb) 订阅 hookName 事件，传入名为 eventName 的 cb 回调
+    // 内部通过 this.hooks.[hookName].call() 触发所有订阅 hookName 的事件
     // 此处仅实现 webpack 常用的 3个钩子函数
     this.hooks = {
       // 开始编译时候的钩子
@@ -67,6 +67,8 @@ class Compiler {
     })
     return entry;
   }
+
+
   /**
    * 根据入口构建模块
    * @param {string[]} entry 
@@ -85,6 +87,8 @@ class Compiler {
     // console.log('----------chunks----------');
     // console.log(this.chunks)
   }
+
+
   /* 核心编译功能：读取文件，编译模块
     1. fs 读取模块源代码
     2. 调用匹配的 loader 处理代码
@@ -202,6 +206,8 @@ class Compiler {
     })
     return module
   }
+
+  
   /**
    * 根据入口文件个数构建chunk
    * @param {string} entryName: 模块名 => 模块所属入口文件

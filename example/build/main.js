@@ -7,8 +7,6 @@
 module.exports = {
   name
 };
-const loader2 = 'william';
-const loader1 = 'https://github.com/willianLiusHao';
       }
         
     };
@@ -43,8 +41,6 @@ const loader1 = 'https://github.com/willianLiusHao';
 
 console.log(depModule, 'dep');
 console.log('This is entry 1 !');
-const loader2 = 'william';
-const loader1 = 'https://github.com/willianLiusHao';
     })();
   })();
   

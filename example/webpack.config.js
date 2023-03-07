@@ -27,7 +27,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js/,
+        test: /entry2.js/,
         use: [
           // 使用loader有三种方式, 这里是2种
           Loader1,

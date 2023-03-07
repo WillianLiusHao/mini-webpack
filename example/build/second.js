@@ -7,8 +7,6 @@
 module.exports = {
   name
 };
-const loader2 = 'william';
-const loader1 = 'https://github.com/willianLiusHao';
       }
         
     };
